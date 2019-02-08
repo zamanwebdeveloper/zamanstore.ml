@@ -16,6 +16,9 @@
 // });
 //Frontend site................
 Route::get('/', 'HomeController@index');
+Route::get('/shop', 'HomeController@shop');
+Route::get('/contact-us', 'HomeController@contact_us');
+
 
 //Show Category wise product here
 Route::get('/product_by_category/{category_id}', 'HomeController@show_product_by_category');

@@ -109,13 +109,13 @@
         <div class="control-group">
             <label class="control-label" for="date01">Product Size</label>
             <div class="controls">
-                <input type="text" class="input-xlarge" name="product_size" required="" >
+                <input type="text" class="input-xlarge" name="product_size" >
             </div>
         </div>
         <div class="control-group">
             <label class="control-label" for="date01">Product Color</label>
             <div class="controls">
-                <input type="text" class="input-xlarge" name="product_color" required="" >
+                <input type="text" class="input-xlarge" name="product_color" >
             </div>
         </div>
 

@@ -18,7 +18,7 @@ class HomeController extends Controller
             ->join('tbl_manufacture','tbl_products.manufacture_id','=','tbl_manufacture.manufacture_id')
             ->select('tbl_products.*','tbl_category.category_name','tbl_manufacture.manufacture_name')
             ->where('tbl_products.publication_status',1)
-            ->limit(12)
+            ->limit(9)
             ->get();
 
         $manage_publication_product=view('pages.home_content')
@@ -27,6 +27,15 @@ class HomeController extends Controller
             ->with('pages.home_content',$manage_publication_product);
         //return view('pages.home_content');
     }
+
+    public function shop(){
+        return view('pages.shop');
+    }
+
+    public function contact_us(){
+        return view('pages.contact-us');
+    }
+
     public function show_product_by_category($category_id)
     {
         $product_by_category=DB::table('tbl_products')
@@ -79,6 +88,7 @@ class HomeController extends Controller
             ->with('pages.product_details',$manage_product_by_details);
 
     }
+
 
 
 }
